@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Aagotheh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0a0c0e;
+            --surface: #111418;
+            --surface2: #181d23;
+            --border: rgba(255,255,255,0.08);
+            --border2: rgba(255,255,255,0.15);
+            --text: #e8e2d4;
+            --text-muted: #7a7468;
+            --text-dim: #4a4640;
+            --mdp: #e6c84a;
+            --mdp-bg: rgba(230,200,74,0.12);
+            --pnc: #4ac4d4;
+            --pnc-bg: rgba(74,196,212,0.12);
+            --ppm: #c46ae0;
+            --ppm-bg: rgba(196,106,224,0.12);
+            --name-color: #e8e2d4;
+            --correct: #4ade80;
+            --correct-bg: rgba(74,222,128,0.12);
+            --wrong: #f87171;
+            --wrong-bg: rgba(248,113,113,0.12);
+            --radius: 14px;
+            --radius-sm: 8px;
+        }
+
+        html, body {
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            overscroll-behavior: none;
+        }
+
+        #app {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* SCREENS */
+        .screen {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+            .screen.active {
+                display: flex;
+            }
+
+        /* HEADER */
+        .header {
+            padding: 20px 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .round-badge {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* PROGRESS BAR */
+        .progress-track {
+            margin: 16px 20px 0;
+            height: 3px;
+            background: var(--surface2);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--mdp), var(--pnc));
+            border-radius: 99px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+
+        /* DOT TRACK */
+        .dot-track {
+            display: flex;
+            gap: 8px;
+            padding: 14px 20px 0;
+            align-items: center;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--surface2);
+            border: 1.5px solid var(--border2);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+            .dot.correct {
+                background: var(--correct);
+                border-color: var(--correct);
+            }
+
+            .dot.wrong {
+                background: var(--wrong);
+                border-color: var(--wrong);
+            }
+
+            .dot.current {
+                border-color: var(--text-muted);
+                animation: pulse-dot 1.2s ease-in-out infinite;
+            }
+
+        @keyframes pulse-dot {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        /* SENTENCE CARD */
+        .sentence-card {
+            margin: 20px 20px 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            line-height: 1.75;
+            font-size: 17px;
+            font-family: 'Amiri', serif;
+            min-height: 90px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .sentence-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, var(--border2), transparent);
+            }
+
+        .blank-mdp {
+            color: var(--mdp);
+            font-weight: 700;
+        }
+
+        .blank-ppm {
+            color: var(--ppm);
+            font-weight: 700;
+        }
+
+        .blank-pnc {
+            color: var(--pnc);
+            font-weight: 700;
+        }
+
+        .blank-name {
+            color: var(--name-color);
+            font-weight: 700;
+        }
+
+        .blank-slot {
+            display: inline-block;
+            border-bottom: 2px solid var(--text-muted);
+            min-width: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            vertical-align: middle;
+            margin: 0 2px;
+            animation: blink-slot 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink-slot {
+            0%, 100% {
+                border-color: var(--text-muted);
+            }
+
+            50% {
+                border-color: var(--text-dim);
+            }
+        }
+
+        /* BLANK INDICATOR */
+        .blank-indicator {
+            margin: 12px 20px 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* OPTIONS */
+        .options-area {
+            padding: 16px 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .options-area.dual {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                align-items: start;
+            }
+
+        .slot-col {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .slot-col-label {
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        .option-btn {
+            width: 100%;
+            padding: 12px 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .options-area:not(.dual) .option-btn {
+            padding: 15px 18px;
+            font-size: 16px;
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        .option-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: transparent;
+            transition: background 0.18s;
+        }
+
+        .option-btn:active::before {
+            background: rgba(255,255,255,0.04);
+        }
+
+        .option-btn:not(.revealed):hover {
+            border-color: var(--border2);
+            background: var(--surface2);
+        }
+
+        .option-letter {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: var(--surface2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            transition: all 0.18s;
+        }
+
+        .options-area:not(.dual) .option-letter {
+            width: 28px;
+            height: 28px;
+            font-size: 13px;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        /* Party colors on options */
+        .opt-mdp {
+            color: var(--mdp);
+        }
+
+        .opt-pnc {
+            color: var(--pnc);
+        }
+
+        .opt-ppm {
+            color: var(--ppm);
+        }
+
+        /* Revealed states */
+        .option-btn.correct-ans {
+            background: var(--correct-bg);
+            border-color: var(--correct);
+            animation: pop-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+            .option-btn.correct-ans .option-letter {
+                background: var(--correct);
+                color: #000;
+            }
+
+        .option-btn.wrong-ans {
+            background: var(--wrong-bg);
+            border-color: var(--wrong);
+            animation: shake 0.4s ease;
+        }
+
+            .option-btn.wrong-ans .option-letter {
+                background: var(--wrong);
+                color: #000;
+            }
+
+        .option-btn.dim-ans {
+            opacity: 0.35;
+        }
+
+        .option-btn.revealed {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @keyframes pop-in {
+            0% {
+                transform: scale(0.95);
+            }
+
+            60% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-6px);
+            }
+
+            40% {
+                transform: translateX(6px);
+            }
+
+            60% {
+                transform: translateX(-4px);
+            }
+
+            80% {
+                transform: translateX(4px);
+            }
+        }
+
+        /* FEEDBACK TOAST */
+        .feedback-toast {
+            margin: 14px 20px 0;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            display: none;
+            animation: slide-up 0.25s ease;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .feedback-toast.show {
+                display: flex;
+            }
+
+            .feedback-toast.correct {
+                background: var(--correct-bg);
+                color: var(--correct);
+                border: 1px solid rgba(74,222,128,0.25);
+            }
+
+            .feedback-toast.wrong {
+                background: var(--wrong-bg);
+                color: var(--wrong);
+                border: 1px solid rgba(248,113,113,0.25);
+            }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(8px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* NEXT BUTTON */
+        .next-btn {
+            margin: 16px 20px 0;
+            padding: 15px;
+            background: var(--text);
+            color: var(--bg);
+            border: none;
+            border-radius: var(--radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.18s;
+            display: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .next-btn.show {
+                display: block;
+            }
+
+            .next-btn:active {
+                transform: scale(0.97);
+            }
+
+        /* SPACER */
+        .spacer {
+            flex: 1;
+        }
+
+        .bottom-pad {
+            height: 32px;
+        }
+
+        /* LOADING */
+        #loading-screen {
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .loading-title {
+            font-family: 'Amiri', serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .loading-sub {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .spinner {
+            width: 36px;
+            height: 36px;
+            border: 2px solid var(--border2);
+            border-top-color: var(--text);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* START SCREEN */
+        #start-screen {
+            justify-content: center;
+            align-items: center;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .start-logo {
+            font-size: 64px;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .start-tagline {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+
+
+
+        .start-btn {
+            width: 100%;
+            padding: 17px;
+            background: var(--text);
+            color: var(--bg);
+            border: none;
+            border-radius: var(--radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.18s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .start-btn:active {
+                transform: scale(0.97);
+            }
+
+        /* RESULTS SCREEN */
+        #results-screen {
+            padding: 32px 20px;
+            align-items: center;
+        }
+
+        .results-title {
+            font-family: 'Amiri', serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .results-score-big {
+            font-size: 64px;
+            font-weight: 700;
+            font-family: 'Amiri', serif;
+            line-height: 1;
+            margin: 16px 0 6px;
+        }
+
+        .results-score-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 28px;
+        }
+
+        .score-cell {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            animation: cell-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+
+            .score-cell.c {
+                background: var(--correct-bg);
+                border-color: var(--correct);
+            }
+
+            .score-cell.w {
+                background: var(--wrong-bg);
+                border-color: var(--wrong);
+            }
+
+        @keyframes cell-pop {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .share-btn {
+            width: 100%;
+            padding: 15px;
+            background: #1d9bf0;
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            transition: all 0.18s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .share-btn:active {
+                transform: scale(0.97);
+                opacity: 0.9;
+            }
+
+        .play-again-btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border2);
+            border-radius: var(--radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.18s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .play-again-btn:active {
+                transform: scale(0.97);
+                background: var(--surface);
+            }
+
+        .verdict {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Error */
+        .error-msg {
+            margin: 20px;
+            padding: 14px;
+            background: var(--wrong-bg);
+            border: 1px solid rgba(248,113,113,0.3);
+            border-radius: var(--radius-sm);
+            color: var(--wrong);
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <!-- LOADING -->
+        <div class="screen active" id="loading-screen">
+            <div class="spinner"></div>
+            <div class="loading-title">اآغوته</div>
+            <div class="loading-sub">Loading titles...</div>
+        </div>
+
+        <!-- START -->
+        <div class="screen" id="start-screen">
+            <div class="start-logo">💢</div>
+            <div class="start-tagline">Fill in the political blanks</div>
+
+            <button class="start-btn" onclick="startGame()">Start Game</button>
+        </div>
+
+        <!-- GAME -->
+        <div class="screen" id="game-screen">
+            <div class="header">
+                <span class="logo">💢</span>
+                <span class="round-badge" id="round-label">Round 1 of 9</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="dot-track" id="dot-track"></div>
+
+            <div class="sentence-card" id="sentence-card"></div>
+
+            <div class="blank-indicator" id="blank-indicator"></div>
+
+            <div class="options-area" id="options-area"></div>
+
+            <div class="feedback-toast" id="feedback-toast"></div>
+
+            <button class="next-btn" id="next-btn" onclick="nextRound()">Next Round</button>
+
+            <div class="spacer"></div>
+            <div class="bottom-pad"></div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="screen" id="results-screen">
+            <div class="results-title" id="results-title">Round Complete</div>
+            <div class="results-score-big" id="results-score">0</div>
+            <div class="results-score-label">out of 9</div>
+            <div class="verdict" id="verdict"></div>
+            <div class="score-grid" id="score-grid"></div>
+            <button class="share-btn" onclick="shareScore()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                Share on X
+            </button>
+            <button class="play-again-btn" onclick="restartGame()">Play Again</button>
+        </div>
+
+    </div>
+
+    <script>
+        const TITLES_URL = "https://raw.githubusercontent.com/WhoIsFishie/test-random/refs/heads/main/_titles.txt";
+        const TOTAL_ROUNDS = 9;
+
+        const partyTrigger = { MDP: "mdp", PNC: "pnc", PPM: "ppm", PNF: "ppm" };
+        const nameTrigger = { Yameen: "ppm", Muizzu: "pnc", Nasheed: "mdp", Fayyaz: "mdp", Solih: "mdp" };
+
+        let allTitles = [];
+        let results = [];
+        let currentRound = 0;
+        let currentSheet = null;
+        let slotAnswers = []; // tracks per-slot correctness for current round
+        let slotsAnswered = 0;
+
+        function getColorClass(word) {
+            if (partyTrigger[word]) return "opt-" + partyTrigger[word];
+            if (nameTrigger[word]) return "opt-" + nameTrigger[word];
+            return "";
+        }
+
+        function getBlankClass(word) {
+            if (partyTrigger[word]) return "blank-" + partyTrigger[word];
+            if (nameTrigger[word]) return "blank-name";
+            return "";
+        }
+
+        function shuffle(arr) {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+
+        function cleanWord(raw) {
+            let w = raw.replace(/^[.,!?;:"]+|[.,!?;:"]+$/g, "").trim();
+            if (w.endsWith("'s")) w = w.slice(0, -2);
+            return w;
+        }
+
+        function isValidTitle(title) {
+            return title.split(" ").some(raw => {
+                const w = cleanWord(raw);
+                return partyTrigger[w] || nameTrigger[w];
+            });
+        }
+
+        function getRandomTitle() {
+            const valid = allTitles.filter(isValidTitle);
+            if (!valid.length) return allTitles[0];
+            return valid[Math.floor(Math.random() * valid.length)];
+        }
+
+        function generateOptions(correct, type) {
+            const pool = type === "party" ? Object.keys(partyTrigger) : Object.keys(nameTrigger);
+            const opts = new Set([correct]);
+            const candidates = pool.filter(k => k !== correct);
+            const shuffled = shuffle(candidates);
+            for (const c of shuffled) {
+                if (opts.size >= 3) break;
+                opts.add(c);
+            }
+            return shuffle([...opts]);
+        }
+
+        function buildSheet(title) {
+            const words = title.split(" ");
+            const slots = [];
+            let blankedWords = [...words];
+
+            for (let i = 0; i < words.length; i++) {
+                const raw = words[i];
+                const clean = cleanWord(raw);
+                let type = null;
+                if (partyTrigger[clean]) type = "party";
+                else if (nameTrigger[clean]) type = "name";
+
+                if (type) {
+                    slots.push({
+                        type,
+                        correct: clean,
+                        options: generateOptions(clean, type),
+                        wordIndex: i,
+                        originalRaw: raw,
+                        answered: false,
+                        chose: null
+                    });
+                    blankedWords[i] = raw.replace(clean, type === "party" ? "___" : "____");
+                }
+            }
+
+            return { original: title, blankedWords, slots, currentSlot: 0 };
+        }
+
+        function renderSentence(sheet) {
+            const container = document.getElementById("sentence-card");
+            let html = "";
+            let slotI = 0;
+
+            for (const part of sheet.blankedWords) {
+                if (part.includes("___")) {
+                    const slot = sheet.slots[slotI];
+                    if (slot && slot.answered) {
+                        const cls = getBlankClass(slot.correct);
+                        const isWrong = slot.chose !== slot.correct;
+                        const extra = isWrong ? ' style="text-decoration:line-through;opacity:0.5"' : '';
+                        html += `<span class="${cls}"${extra}>${slot.chose}</span> `;
+                        if (isWrong) html += `<span class="${cls}">${slot.correct}</span> `;
+                    } else {
+                        const label = part.includes("____") ? "____" : "___";
+                        const active = !slot.answered && slotI === sheet.slots.findIndex(s => !s.answered);
+                        html += `<span class="blank-slot${active ? ' active-slot' : ''}">${label}</span> `;
+                    }
+                    slotI++;
+                } else {
+                    html += part + " ";
+                }
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderDots() {
+            const track = document.getElementById("dot-track");
+            track.innerHTML = "";
+            for (let i = 0; i < TOTAL_ROUNDS; i++) {
+                const d = document.createElement("div");
+                d.className = "dot";
+                if (i < results.length) d.classList.add(results[i] ? "correct" : "wrong");
+                else if (i === results.length) d.classList.add("current");
+                track.appendChild(d);
+            }
+        }
+
+        function renderOptions(sheet) {
+            const area = document.getElementById("options-area");
+            area.innerHTML = "";
+            const isDual = sheet.slots.length >= 2;
+            const letters = ["A", "B", "C"];
+
+            if (isDual) {
+                area.classList.add("dual");
+
+                sheet.slots.slice(0, 2).forEach((slot, si) => {
+                    const col = document.createElement("div");
+                    col.className = "slot-col";
+                    col.id = "slot-col-" + si;
+
+                    const lbl = document.createElement("div");
+                    lbl.className = "slot-col-label";
+                    lbl.textContent = "Blank " + (si + 1);
+                    col.appendChild(lbl);
+
+                    slot.options.forEach((opt, i) => {
+                        const btn = document.createElement("button");
+                        btn.className = "option-btn";
+                        btn.dataset.value = opt;
+                        btn.dataset.slotIndex = si;
+
+                        const colorCls = getColorClass(opt);
+                        btn.innerHTML = `<div class="option-letter">${letters[i]}</div><div class="option-text ${colorCls}">${opt}</div>`;
+                        btn.addEventListener("click", () => handleAnswerDual(opt, si, btn, col));
+                        col.appendChild(btn);
+                    });
+
+                    area.appendChild(col);
+                });
+            } else {
+                area.classList.remove("dual");
+                const slot = sheet.slots[0];
+
+                slot.options.forEach((opt, i) => {
+                    const btn = document.createElement("button");
+                    btn.className = "option-btn";
+                    btn.dataset.value = opt;
+
+                    const colorCls = getColorClass(opt);
+                    btn.innerHTML = `<div class="option-letter">${letters[i]}</div><div class="option-text ${colorCls}">${opt}</div>`;
+                    btn.addEventListener("click", () => handleAnswerSingle(opt, slot, btn, area));
+                    area.appendChild(btn);
+                });
+            }
+        }
+
+        function revealCol(col, slot, chosen) {
+            col.querySelectorAll(".option-btn").forEach(b => {
+                b.classList.add("revealed");
+                if (b.dataset.value === slot.correct) b.classList.add("correct-ans");
+                else if (b.dataset.value === chosen && chosen !== slot.correct) b.classList.add("wrong-ans");
+                else if (b.dataset.value !== slot.correct) b.classList.add("dim-ans");
+            });
+        }
+
+        function handleAnswerDual(chosen, slotIndex, btn, col) {
+            const slot = currentSheet.slots[slotIndex];
+            if (slot.answered) return;
+
+            slot.answered = true;
+            slot.chose = chosen;
+            slotAnswers[slotIndex] = chosen === slot.correct;
+            slotsAnswered++;
+
+            revealCol(col, slot, chosen);
+            renderSentence(currentSheet);
+
+            // both slots answered -> resolve round
+            if (slotsAnswered >= 2) {
+                const roundCorrect = slotAnswers.every(Boolean);
+                results.push(roundCorrect);
+                renderDots();
+                updateProgress();
+
+                const toast = document.getElementById("feedback-toast");
+                if (roundCorrect) {
+                    toast.className = "feedback-toast correct show";
+                    toast.innerHTML = "Both correct!";
+                } else {
+                    const wrongs = currentSheet.slots
+                        .filter((s, i) => !slotAnswers[i])
+                        .map(s => `<strong>${s.correct}</strong>`)
+                        .join(" and ");
+                    toast.className = "feedback-toast wrong show";
+                    toast.innerHTML = `Correct: ${wrongs}`;
+                }
+
+                const nextBtn = document.getElementById("next-btn");
+                nextBtn.classList.add("show");
+                nextBtn.textContent = currentRound >= TOTAL_ROUNDS ? "See Results" : "Next Round";
+            }
+        }
+
+        function handleAnswerSingle(chosen, slot, btn, area) {
+            if (slot.answered) return;
+
+            slot.answered = true;
+            slot.chose = chosen;
+            const isCorrect = chosen === slot.correct;
+            results.push(isCorrect);
+
+            area.querySelectorAll(".option-btn").forEach(b => {
+                b.classList.add("revealed");
+                if (b.dataset.value === slot.correct) b.classList.add("correct-ans");
+                else if (b.dataset.value === chosen && !isCorrect) b.classList.add("wrong-ans");
+                else if (b.dataset.value !== slot.correct) b.classList.add("dim-ans");
+            });
+
+            const toast = document.getElementById("feedback-toast");
+            if (isCorrect) {
+                toast.className = "feedback-toast correct show";
+                toast.innerHTML = "Correct!";
+            } else {
+                toast.className = "feedback-toast wrong show";
+                toast.innerHTML = `Correct answer: <strong style="margin-left:4px">${slot.correct}</strong>`;
+            }
+
+            renderSentence(currentSheet);
+            renderDots();
+            updateProgress();
+
+            const nextBtn = document.getElementById("next-btn");
+            nextBtn.classList.add("show");
+            nextBtn.textContent = currentRound >= TOTAL_ROUNDS ? "See Results" : "Next Round";
+        }
+
+        function updateProgress() {
+            const pct = (results.length / TOTAL_ROUNDS) * 100;
+            document.getElementById("progress-fill").style.width = pct + "%";
+            document.getElementById("round-label").textContent = `Round ${results.length} of ${TOTAL_ROUNDS}`;
+        }
+
+        function nextRound() {
+            currentRound++;
+            if (currentRound > TOTAL_ROUNDS) { showResults(); return; }
+            loadRound();
+        }
+
+        function loadRound() {
+            slotAnswers = [];
+            slotsAnswered = 0;
+
+            document.getElementById("feedback-toast").className = "feedback-toast";
+            document.getElementById("next-btn").classList.remove("show");
+
+            const title = getRandomTitle();
+            currentSheet = buildSheet(title);
+
+            renderSentence(currentSheet);
+            renderDots();
+            renderOptions(currentSheet);
+            document.getElementById("blank-indicator").textContent = "";
+            document.getElementById("round-label").textContent = `Round ${results.length + 1} of ${TOTAL_ROUNDS}`;
+        }
+
+        function showResults() {
+            showScreen("results-screen");
+
+            const score = results.filter(Boolean).length;
+            document.getElementById("results-score").textContent = score;
+
+            const verdicts = [
+                [0, 1, "Better luck next time."],
+                [2, 3, "Keep practicing!"],
+                [4, 5, "Not bad at all."],
+                [6, 7, "Well done!"],
+                [8, 8, "Almost perfect!"],
+                [9, 9, "Flawless victory! 🎉"]
+            ];
+            const v = verdicts.find(([min, max]) => score >= min && score <= max);
+            document.getElementById("verdict").textContent = v ? v[2] : "";
+
+            const title = score >= 7 ? "Excellent!" : score >= 4 ? "Good Try!" : "Keep Studying!";
+            document.getElementById("results-title").textContent = title;
+
+            const grid = document.getElementById("score-grid");
+            grid.innerHTML = "";
+            results.forEach((r, i) => {
+                const cell = document.createElement("div");
+                cell.className = "score-cell " + (r ? "c" : "w");
+                cell.style.animationDelay = (i * 0.06) + "s";
+                cell.textContent = "";
+                grid.appendChild(cell);
+            });
+        }
+
+        function buildShareText(score) {
+            const rows = [];
+
+            for (let i = 0; i < results.length; i += 3) {
+                const row = results
+                    .slice(i, i + 3)
+                    .map(r => r ? "🟩" : "🟥")
+                    .join("");
+                rows.push(row);
+            }
+
+            const emojiGrid = rows.join("\n");
+
+            return `I scored ${score}/9 on Aagotheh!
+
+${emojiGrid}
+
+Test your Maldivian politics knowledge!`;
+        }
+
+
+        function generateRandomResults(size = 9) {
+            return Array.from({ length: size }, () => Math.random() < 0.5);
+        }
+
+        function buildShareTextFromResults(results) {
+            const rows = [];
+
+            for (let i = 0; i < results.length; i += 3) {
+                const row = results
+                    .slice(i, i + 3)
+                    .map(r => r ? "🟩" : "🟥")
+                    .join("");
+                rows.push(row);
+            }
+
+            const emojiGrid = rows.join("\n");
+            const score = results.filter(Boolean).length;
+
+            return `I scored ${score}/9 on Aagotheh!
+
+${emojiGrid}
+
+Test your Maldivian politics knowledge!`;
+        }
+
+        function generateDummyShareUrl() {
+            const results = generateRandomResults(9);
+            const text = buildShareTextFromResults(results);
+
+            return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+        }
+
+        function shareScoreDebug() {
+            const score = results.filter(Boolean).length;
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(buildShareText(score))}`;
+
+
+            console.log(buildShareText(score));
+            console.log(url);
+        }
+
+        function restartGame() {
+            results = [];
+            currentRound = 0;
+            startGame();
+        }
+
+        function startGame() {
+            currentRound = 1;
+            results = [];
+            showScreen("game-screen");
+            loadRound();
+        }
+
+        function showScreen(id) {
+            document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+
+        async function init() {
+            try {
+                const res = await fetch(TITLES_URL);
+                if (!res.ok) throw new Error("fetch failed");
+                const text = await res.text();
+                allTitles = text.split("\n").map(l => l.trim()).filter(Boolean);
+                if (!allTitles.length) throw new Error("no titles");
+                showScreen("start-screen");
+            } catch (e) {
+                document.getElementById("loading-screen").innerHTML +=
+                    `<div style="margin:20px;padding:14px;background:rgba(248,113,113,0.12);border:1px solid rgba(248,113,113,0.3);border-radius:8px;color:#f87171;font-size:14px;">Failed to load titles. Check your connection and reload.</div>`;
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
