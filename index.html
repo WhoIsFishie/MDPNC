@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Aagotheh</title>
+    <title>#MDPNC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -17,27 +22,28 @@
             --bg: #0a0c0e;
             --surface: #111418;
             --surface2: #181d23;
-            --border: rgba(255,255,255,0.08);
-            --border2: rgba(255,255,255,0.15);
+            --border: rgba(255, 255, 255, 0.08);
+            --border2: rgba(255, 255, 255, 0.15);
             --text: #e8e2d4;
             --text-muted: #7a7468;
             --text-dim: #4a4640;
             --mdp: #e6c84a;
-            --mdp-bg: rgba(230,200,74,0.12);
+            --mdp-bg: rgba(230, 200, 74, 0.12);
             --pnc: #4ac4d4;
-            --pnc-bg: rgba(74,196,212,0.12);
+            --pnc-bg: rgba(74, 196, 212, 0.12);
             --ppm: #c46ae0;
-            --ppm-bg: rgba(196,106,224,0.12);
+            --ppm-bg: rgba(196, 106, 224, 0.12);
             --name-color: #e8e2d4;
             --correct: #4ade80;
-            --correct-bg: rgba(74,222,128,0.12);
+            --correct-bg: rgba(74, 222, 128, 0.12);
             --wrong: #f87171;
-            --wrong-bg: rgba(248,113,113,0.12);
+            --wrong-bg: rgba(248, 113, 113, 0.12);
             --radius: 14px;
             --radius-sm: 8px;
         }
 
-        html, body {
+        html,
+        body {
             min-height: 100vh;
             background: var(--bg);
             color: var(--text);
@@ -61,9 +67,9 @@
             min-height: 100vh;
         }
 
-            .screen.active {
-                display: flex;
-            }
+        .screen.active {
+            display: flex;
+        }
 
         /* HEADER */
         .header {
@@ -119,23 +125,25 @@
             flex-shrink: 0;
         }
 
-            .dot.correct {
-                background: var(--correct);
-                border-color: var(--correct);
-            }
+        .dot.correct {
+            background: var(--correct);
+            border-color: var(--correct);
+        }
 
-            .dot.wrong {
-                background: var(--wrong);
-                border-color: var(--wrong);
-            }
+        .dot.wrong {
+            background: var(--wrong);
+            border-color: var(--wrong);
+        }
 
-            .dot.current {
-                border-color: var(--text-muted);
-                animation: pulse-dot 1.2s ease-in-out infinite;
-            }
+        .dot.current {
+            border-color: var(--text-muted);
+            animation: pulse-dot 1.2s ease-in-out infinite;
+        }
 
         @keyframes pulse-dot {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: 1;
             }
@@ -161,15 +169,15 @@
             overflow: hidden;
         }
 
-            .sentence-card::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background: linear-gradient(90deg, transparent, var(--border2), transparent);
-            }
+        .sentence-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border2), transparent);
+        }
 
         .blank-mdp {
             color: var(--mdp);
@@ -206,7 +214,9 @@
         }
 
         @keyframes blink-slot {
-            0%, 100% {
+
+            0%,
+            100% {
                 border-color: var(--text-muted);
             }
 
@@ -231,12 +241,12 @@
             gap: 10px;
         }
 
-            .options-area.dual {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8px;
-                align-items: start;
-            }
+        .options-area.dual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            align-items: start;
+        }
 
         .slot-col {
             display: flex;
@@ -292,7 +302,7 @@
         }
 
         .option-btn:active::before {
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .option-btn:not(.revealed):hover {
@@ -345,10 +355,10 @@
             animation: pop-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-            .option-btn.correct-ans .option-letter {
-                background: var(--correct);
-                color: #000;
-            }
+        .option-btn.correct-ans .option-letter {
+            background: var(--correct);
+            color: #000;
+        }
 
         .option-btn.wrong-ans {
             background: var(--wrong-bg);
@@ -356,10 +366,10 @@
             animation: shake 0.4s ease;
         }
 
-            .option-btn.wrong-ans .option-letter {
-                background: var(--wrong);
-                color: #000;
-            }
+        .option-btn.wrong-ans .option-letter {
+            background: var(--wrong);
+            color: #000;
+        }
 
         .option-btn.dim-ans {
             opacity: 0.35;
@@ -385,7 +395,9 @@
         }
 
         @keyframes shake {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(0);
             }
 
@@ -419,21 +431,21 @@
             gap: 8px;
         }
 
-            .feedback-toast.show {
-                display: flex;
-            }
+        .feedback-toast.show {
+            display: flex;
+        }
 
-            .feedback-toast.correct {
-                background: var(--correct-bg);
-                color: var(--correct);
-                border: 1px solid rgba(74,222,128,0.25);
-            }
+        .feedback-toast.correct {
+            background: var(--correct-bg);
+            color: var(--correct);
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
 
-            .feedback-toast.wrong {
-                background: var(--wrong-bg);
-                color: var(--wrong);
-                border: 1px solid rgba(248,113,113,0.25);
-            }
+        .feedback-toast.wrong {
+            background: var(--wrong-bg);
+            color: var(--wrong);
+            border: 1px solid rgba(248, 113, 113, 0.25);
+        }
 
         @keyframes slide-up {
             from {
@@ -464,13 +476,13 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-            .next-btn.show {
-                display: block;
-            }
+        .next-btn.show {
+            display: block;
+        }
 
-            .next-btn:active {
-                transform: scale(0.97);
-            }
+        .next-btn:active {
+            transform: scale(0.97);
+        }
 
         /* SPACER */
         .spacer {
@@ -554,9 +566,9 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-            .start-btn:active {
-                transform: scale(0.97);
-            }
+        .start-btn:active {
+            transform: scale(0.97);
+        }
 
         /* RESULTS SCREEN */
         #results-screen {
@@ -606,15 +618,15 @@
             animation: cell-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
         }
 
-            .score-cell.c {
-                background: var(--correct-bg);
-                border-color: var(--correct);
-            }
+        .score-cell.c {
+            background: var(--correct-bg);
+            border-color: var(--correct);
+        }
 
-            .score-cell.w {
-                background: var(--wrong-bg);
-                border-color: var(--wrong);
-            }
+        .score-cell.w {
+            background: var(--wrong-bg);
+            border-color: var(--wrong);
+        }
 
         @keyframes cell-pop {
             from {
@@ -643,10 +655,10 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-            .share-btn:active {
-                transform: scale(0.97);
-                opacity: 0.9;
-            }
+        .share-btn:active {
+            transform: scale(0.97);
+            opacity: 0.9;
+        }
 
         .verdict {
             font-size: 13px;
@@ -660,7 +672,7 @@
             margin: 20px;
             padding: 14px;
             background: var(--wrong-bg);
-            border: 1px solid rgba(248,113,113,0.3);
+            border: 1px solid rgba(248, 113, 113, 0.3);
             border-radius: var(--radius-sm);
             color: var(--wrong);
             font-size: 14px;
@@ -668,49 +680,50 @@
         }
 
         .article-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 14px;
-}
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+        }
 
-.article-card {
-    display: block;
-    text-decoration: none;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px;
-    transition: all 0.18s ease;
-}
+        .article-card {
+            display: block;
+            text-decoration: none;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px;
+            transition: all 0.18s ease;
+        }
 
-.article-card:hover {
-    border-color: var(--border2);
-    background: var(--surface2);
-}
+        .article-card:hover {
+            border-color: var(--border2);
+            background: var(--surface2);
+        }
 
-.article-date {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-}
+        .article-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
 
-.article-title {
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--text);
-}
+        .article-title {
+            font-size: 15px;
+            line-height: 1.5;
+            color: var(--text);
+        }
     </style>
 </head>
+
 <body>
     <div id="app">
 
         <!-- LOADING -->
         <div class="screen active" id="loading-screen">
             <div class="spinner"></div>
-            <div class="loading-title">اآغوته</div>
-            <div class="loading-sub">Loading titles...</div>
+            <div class="loading-title">#MDPNC</div>
+            <div class="loading-sub">Fetching Game Files...</div>
         </div>
 
         <!-- START -->
@@ -810,19 +823,19 @@
             });
         }
 
-function getRandomTitle() {
-    const usedUrls = new Set(playedArticles.map(a => a.url));
+        function getRandomTitle() {
+            const usedUrls = new Set(playedArticles.map(a => a.url));
 
-    const valid = allArticles.filter(a =>
-        isValidTitle(a.title) &&
-        !usedUrls.has(a.url)
-    );
+            const valid = allArticles.filter(a =>
+                isValidTitle(a.title) &&
+                !usedUrls.has(a.url)
+            );
 
-    if (!valid.length)
-        return allArticles[Math.floor(Math.random() * allArticles.length)];
+            if (!valid.length)
+                return allArticles[Math.floor(Math.random() * allArticles.length)];
 
-    return valid[Math.floor(Math.random() * valid.length)];
-}
+            return valid[Math.floor(Math.random() * valid.length)];
+        }
 
         function generateOptions(correct, type) {
             const pool = type === "party" ? Object.keys(partyTrigger) : Object.keys(nameTrigger);
@@ -986,14 +999,14 @@ function getRandomTitle() {
                 const toast = document.getElementById("feedback-toast");
                 if (roundCorrect) {
                     toast.className = "feedback-toast correct show";
-                    toast.innerHTML = "✓ Both correct!";
+                    toast.innerHTML = "Both correct!";
                 } else {
                     const wrongs = currentSheet.slots
                         .filter((s, i) => !slotAnswers[i])
                         .map(s => `<strong>${s.correct}</strong>`)
                         .join(" and ");
                     toast.className = "feedback-toast wrong show";
-                    toast.innerHTML = `✗ Correct: ${wrongs}`;
+                    toast.innerHTML = `Correct: ${wrongs}`;
                 }
 
                 const nextBtn = document.getElementById("next-btn");
@@ -1020,10 +1033,10 @@ function getRandomTitle() {
             const toast = document.getElementById("feedback-toast");
             if (isCorrect) {
                 toast.className = "feedback-toast correct show";
-                toast.innerHTML = "✓ Correct!";
+                toast.innerHTML = "Correct!";
             } else {
                 toast.className = "feedback-toast wrong show";
-                toast.innerHTML = `✗ Correct answer: <strong style="margin-left:4px">${slot.correct}</strong>`;
+                toast.innerHTML = `Correct answer: <strong style="margin-left:4px">${slot.correct}</strong>`;
             }
 
             renderSentence(currentSheet);
@@ -1100,7 +1113,7 @@ function getRandomTitle() {
 
             const articlesContainer = document.getElementById("articles-list");
 
-articlesContainer.innerHTML = `
+            articlesContainer.innerHTML = `
     <div class="article-list">
         ${playedArticles.map(a => `
             <a class="article-card" href="${a.url}" target="_blank">
@@ -1168,27 +1181,27 @@ Test your Maldivian politics knowledge!`;
                 if (!res.ok) throw new Error("fetch failed");
                 const text = await res.text();
 
-const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+                const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
 
-allArticles = [];
+                allArticles = [];
 
-for (let i = 1; i < lines.length; i++) {
-    const line = lines[i];
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i];
 
-    const match = line.match(/^"?(.*?)"?,"?(.*?)"?,"?(.*?)"?$/);
+                    const match = line.match(/^"?(.*?)"?,"?(.*?)"?,"?(.*?)"?$/);
 
-    if (!match) continue;
+                    if (!match) continue;
 
-    allArticles.push({
-        title: match[1],
-        url: match[2],
-        date: match[3]
-    });
-}
+                    allArticles.push({
+                        title: match[1],
+                        url: match[2],
+                        date: match[3]
+                    });
+                }
 
-if (!allArticles.length)
-    throw new Error("no articles");
-                
+                if (!allArticles.length)
+                    throw new Error("no articles");
+
                 showScreen("start-screen");
             } catch (e) {
                 document.getElementById("loading-screen").innerHTML +=
@@ -1199,4 +1212,5 @@ if (!allArticles.length)
         init();
     </script>
 </body>
+
 </html>
