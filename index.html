@@ -666,6 +666,41 @@
             font-size: 14px;
             display: none;
         }
+
+        .article-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.article-card {
+    display: block;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    transition: all 0.18s ease;
+}
+
+.article-card:hover {
+    border-color: var(--border2);
+    background: var(--surface2);
+}
+
+.article-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.article-title {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+}
     </style>
 </head>
 <body>
@@ -721,6 +756,7 @@
             <div class="verdict" id="verdict"></div>
             <div class="score-grid" id="score-grid"></div>
             <button class="share-btn" onclick="shareScore()">Share on Twitter</button>
+            <div id="articles-list" style="width:100%;margin-top:18px;"></div>
         </div>
 
     </div>
@@ -732,7 +768,8 @@
         const partyTrigger = { MDP: "mdp", PNC: "pnc", PPM: "ppm", PNF: "ppm" };
         const nameTrigger = { Yameen: "ppm", Muizzu: "pnc", Nasheed: "mdp", Fayyaz: "mdp", Solih: "mdp" };
 
-        let allTitles = [];
+        let allArticles = [];
+        let playedArticles = [];
         let results = [];
         let currentRound = 0;
         let currentSheet = null;
@@ -773,11 +810,19 @@
             });
         }
 
-        function getRandomTitle() {
-            const valid = allTitles.filter(isValidTitle);
-            if (!valid.length) return allTitles[0];
-            return valid[Math.floor(Math.random() * valid.length)];
-        }
+function getRandomTitle() {
+    const usedUrls = new Set(playedArticles.map(a => a.url));
+
+    const valid = allArticles.filter(a =>
+        isValidTitle(a.title) &&
+        !usedUrls.has(a.url)
+    );
+
+    if (!valid.length)
+        return allArticles[Math.floor(Math.random() * allArticles.length)];
+
+    return valid[Math.floor(Math.random() * valid.length)];
+}
 
         function generateOptions(correct, type) {
             const pool = type === "party" ? Object.keys(partyTrigger) : Object.keys(nameTrigger);
@@ -1009,8 +1054,12 @@
             document.getElementById("feedback-toast").className = "feedback-toast";
             document.getElementById("next-btn").classList.remove("show");
 
-            const title = getRandomTitle();
-            currentSheet = buildSheet(title);
+            const article = getRandomTitle();
+
+            playedArticles.push(article);
+
+            currentSheet = buildSheet(article.title);
+            currentSheet.article = article;
 
             renderSentence(currentSheet);
             renderDots();
@@ -1048,6 +1097,19 @@
                 cell.textContent = "";
                 grid.appendChild(cell);
             });
+
+            const articlesContainer = document.getElementById("articles-list");
+
+articlesContainer.innerHTML = `
+    <div class="article-list">
+        ${playedArticles.map(a => `
+            <a class="article-card" href="${a.url}" target="_blank">
+                <div class="article-date">${a.date}</div>
+                <div class="article-title">${a.title}</div>
+            </a>
+        `).join("")}
+    </div>
+`;
         }
 
         function buildShareText(score) {
@@ -1088,6 +1150,7 @@ Test your Maldivian politics knowledge!`;
         }
 
         function startGame() {
+            playedArticles = [];
             currentRound = 1;
             results = [];
             showScreen("game-screen");
@@ -1104,8 +1167,28 @@ Test your Maldivian politics knowledge!`;
                 const res = await fetch(TITLES_URL);
                 if (!res.ok) throw new Error("fetch failed");
                 const text = await res.text();
-                allTitles = text.split("\n").map(l => l.trim()).filter(Boolean);
-                if (!allTitles.length) throw new Error("no titles");
+
+const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+
+allArticles = [];
+
+for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
+
+    const match = line.match(/^"?(.*?)"?,"?(.*?)"?,"?(.*?)"?$/);
+
+    if (!match) continue;
+
+    allArticles.push({
+        title: match[1],
+        url: match[2],
+        date: match[3]
+    });
+}
+
+if (!allArticles.length)
+    throw new Error("no articles");
+                
                 showScreen("start-screen");
             } catch (e) {
                 document.getElementById("loading-screen").innerHTML +=
