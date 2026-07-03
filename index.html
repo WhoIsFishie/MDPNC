@@ -782,6 +782,85 @@
         const partyTrigger = { MDP: "mdp", PNC: "pnc", PPM: "ppm", PNF: "ppm" };
         const nameTrigger = { Yameen: "ppm", Muizzu: "pnc", Nasheed: "mdp", Fayyaz: "mdp", Solih: "mdp" };
 
+        // ── Model-based distractor selection ─────────────────────────────────
+        const MODEL_URL = "https://raw.githubusercontent.com/WhoIsFishie/test-random/refs/heads/main/model.json";
+        const ALPHA = 0.5; // Laplace smoothing, matches C# ConfidenceScorer
+
+        let _modelReady = false;
+        let _modelPartyCounts = {};
+        let _modelPoliticianCounts = {};
+        let _modelPairCounts = {};
+        let _modelTotalArticles = 0;
+
+        async function loadModel() {
+            try {
+                const res = await fetch(MODEL_URL);
+                if (!res.ok) throw new Error("model fetch failed: " + res.status);
+                const data = await res.json();
+
+                _modelPartyCounts = {};
+                _modelPoliticianCounts = {};
+                _modelPairCounts = {};
+                _modelTotalArticles = data.TotalArticles || 0;
+
+                for (const bucket of Object.values(data.Buckets)) {
+                    for (const [party, count] of Object.entries(bucket.PartyCounts || {})) {
+                        _modelPartyCounts[party] = (_modelPartyCounts[party] || 0) + count;
+                    }
+                    for (const [pol, count] of Object.entries(bucket.PoliticianCounts || {})) {
+                        _modelPoliticianCounts[pol] = (_modelPoliticianCounts[pol] || 0) + count;
+                    }
+                    for (const [pair, count] of Object.entries(bucket.PairCounts || {})) {
+                        _modelPairCounts[pair] = (_modelPairCounts[pair] || 0) + count;
+                    }
+                }
+
+                _modelReady = true;
+            } catch (err) {
+                console.warn("Model load failed, falling back to random distractors:", err);
+                _modelReady = false;
+            }
+        }
+
+        function makePairKey(a, b) {
+            return a.localeCompare(b) <= 0 ? a + "|" + b : b + "|" + a;
+        }
+
+        function getEntityTotalCount(name) {
+            if (_modelPartyCounts[name] !== undefined) return _modelPartyCounts[name];
+            if (_modelPoliticianCounts[name] !== undefined) return _modelPoliticianCounts[name];
+            return 0;
+        }
+
+        function scoreDistractor(candidate, contextEntities) {
+            if (!contextEntities || contextEntities.length === 0) {
+                const totalCandidates = 9; // 4 parties + 5 politicians
+                const count = getEntityTotalCount(candidate);
+                return (count + ALPHA) / (_modelTotalArticles + ALPHA * totalCandidates);
+            }
+
+            let sum = 0;
+            let contributors = 0;
+
+            for (const ctxEntity of contextEntities) {
+                const pairKey = makePairKey(candidate, ctxEntity);
+                const pairCount = _modelPairCounts[pairKey] || 0;
+                const entityCount = getEntityTotalCount(ctxEntity);
+
+                if (entityCount > 0) {
+                    sum += (pairCount + ALPHA) / (entityCount + ALPHA * 2);
+                    contributors++;
+                }
+            }
+
+            if (contributors > 0) return sum / contributors;
+
+            const totalCandidates = 9;
+            const count = getEntityTotalCount(candidate);
+            return (count + ALPHA) / (_modelTotalArticles + ALPHA * totalCandidates);
+        }
+        // ─────────────────────────────────────────────────────────────────────
+
         let allArticles = [];
         let playedArticles = [];
         let results = [];
@@ -838,8 +917,21 @@
             return valid[Math.floor(Math.random() * valid.length)];
         }
 
-        function generateOptions(correct, type) {
+        function generateOptions(correct, type, contextEntities) {
             const pool = type === "party" ? Object.keys(partyTrigger) : Object.keys(nameTrigger);
+
+            if (_modelReady) {
+                const candidates = pool.filter(k => k !== correct);
+                const scored = candidates.map(c => ({
+                    entity: c,
+                    score: scoreDistractor(c, contextEntities || [])
+                }));
+                scored.sort((a, b) => b.score - a.score);
+                const top2 = scored.slice(0, 2).map(s => s.entity);
+                return shuffle([correct, ...top2]);
+            }
+
+            // Fallback: original random logic
             const opts = new Set([correct]);
             const candidates = pool.filter(k => k !== correct);
             const shuffled = shuffle(candidates);
@@ -855,6 +947,7 @@
             const slots = [];
             let blankedWords = [...words];
 
+            // Pass 1: identify entity slots and blank words
             for (let i = 0; i < words.length; i++) {
                 const raw = words[i];
                 const clean = cleanWord(raw);
@@ -866,7 +959,7 @@
                     slots.push({
                         type,
                         correct: clean,
-                        options: generateOptions(clean, type),
+                        options: [],          // filled in pass 2
                         wordIndex: i,
                         originalRaw: raw,
                         answered: false,
@@ -874,6 +967,13 @@
                     });
                     blankedWords[i] = raw.replace(clean, type === "party" ? "___" : "____");
                 }
+            }
+
+            // Pass 2: generate options with context from all other entities in the title
+            const allEntityNames = slots.map(s => s.correct);
+            for (const slot of slots) {
+                const contextEntities = allEntityNames.filter(e => e !== slot.correct);
+                slot.options = generateOptions(slot.correct, slot.type, contextEntities);
             }
 
             return { original: title, blankedWords, slots, currentSlot: 0 };
@@ -1178,7 +1278,10 @@ Test your Maldivian politics knowledge!`;
 
         async function init() {
             try {
-                const res = await fetch(TITLES_URL);
+                const [res] = await Promise.all([
+                    fetch(TITLES_URL),
+                    loadModel()
+                ]);
                 if (!res.ok) throw new Error("fetch failed");
                 const text = await res.text();
 

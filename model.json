@@ -1,0 +1,3053 @@
+{
+  "Description": "MDPNC confidence scorer \u2014 precomputed entity/co-occurrence counts per month",
+  "MinBucketKey": 200411,
+  "MaxBucketKey": 202605,
+  "PartyCount": 4,
+  "PoliticianCount": 5,
+  "TotalArticles": 5680,
+  "Buckets": {
+    "202605": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202604": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "PNC": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202603": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "PNC": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202602": {
+      "TotalArticles": 15,
+      "PartyCounts": {
+        "PNC": 7,
+        "MDP": 9
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 2,
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202601": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "PNC": 9,
+        "MDP": 11
+      },
+      "PoliticianCounts": {
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 3,
+        "Muizzu|PNC": 1,
+        "MDP|Muizzu": 1
+      }
+    },
+    "202512": {
+      "TotalArticles": 23,
+      "PartyCounts": {
+        "MDP": 15,
+        "PNC": 7,
+        "PNF": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Solih": 2,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2,
+        "MDP|Solih": 2,
+        "Nasheed|Solih": 1,
+        "Fayyaz|MDP": 1,
+        "Fayyaz|Solih": 1
+      }
+    },
+    "202511": {
+      "TotalArticles": 24,
+      "PartyCounts": {
+        "MDP": 21,
+        "PNC": 2
+      },
+      "PoliticianCounts": {
+        "Solih": 1,
+        "Nasheed": 2,
+        "Fayyaz": 1,
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "MDP|Solih": 1,
+        "MDP|Nasheed": 2,
+        "Fayyaz|MDP": 1,
+        "Muizzu|PNC": 1
+      }
+    },
+    "202510": {
+      "TotalArticles": 37,
+      "PartyCounts": {
+        "PPM": 1,
+        "PNF": 4,
+        "MDP": 30,
+        "PNC": 5
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Fayyaz": 2
+      },
+      "PairCounts": {
+        "PNF|PPM": 1,
+        "PPM|Yameen": 1,
+        "PNF|Yameen": 1,
+        "Fayyaz|MDP": 2,
+        "MDP|PNC": 1,
+        "PNC|PNF": 2
+      }
+    },
+    "202509": {
+      "TotalArticles": 18,
+      "PartyCounts": {
+        "MDP": 14,
+        "PNC": 4
+      },
+      "PoliticianCounts": {
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Solih": 1
+      }
+    },
+    "202508": {
+      "TotalArticles": 18,
+      "PartyCounts": {
+        "MDP": 12,
+        "PNC": 4,
+        "PNF": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202507": {
+      "TotalArticles": 12,
+      "PartyCounts": {
+        "MDP": 11,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Solih": 1
+      }
+    },
+    "202506": {
+      "TotalArticles": 14,
+      "PartyCounts": {
+        "MDP": 13,
+        "PNC": 2
+      },
+      "PoliticianCounts": {
+        "Solih": 1,
+        "Nasheed": 5,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "MDP|Solih": 1,
+        "MDP|Nasheed": 5,
+        "MDP|PNC": 1,
+        "Fayyaz|MDP": 1,
+        "Fayyaz|Nasheed": 1
+      }
+    },
+    "202505": {
+      "TotalArticles": 7,
+      "PartyCounts": {
+        "MDP": 5,
+        "PNC": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202504": {
+      "TotalArticles": 22,
+      "PartyCounts": {
+        "MDP": 19,
+        "PNC": 3
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "Fayyaz|MDP": 1,
+        "MDP|PNC": 1
+      }
+    },
+    "202503": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "MDP": 17,
+        "PNC": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {
+        "MDP|PNC": 1
+      }
+    },
+    "202502": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "MDP": 11,
+        "PNC": 15
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1,
+        "Muizzu": 3
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1,
+        "Muizzu|PNC": 3
+      }
+    },
+    "202501": {
+      "TotalArticles": 86,
+      "PartyCounts": {
+        "PPM": 2,
+        "PNC": 22,
+        "MDP": 65
+      },
+      "PoliticianCounts": {
+        "Muizzu": 4,
+        "Solih": 2,
+        "Fayyaz": 2,
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "Muizzu|PNC": 4,
+        "MDP|Solih": 2,
+        "Fayyaz|MDP": 2,
+        "MDP|PNC": 4,
+        "MDP|Nasheed": 2,
+        "Nasheed|PNC": 1,
+        "MDP|Muizzu": 1
+      }
+    },
+    "202412": {
+      "TotalArticles": 34,
+      "PartyCounts": {
+        "PNC": 7,
+        "MDP": 25,
+        "PPM": 4
+      },
+      "PoliticianCounts": {
+        "Solih": 1,
+        "Fayyaz": 1,
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 3,
+        "MDP|Solih": 1,
+        "Fayyaz|PNC": 1,
+        "Fayyaz|MDP": 1,
+        "MDP|Muizzu": 1,
+        "Muizzu|PNC": 1
+      }
+    },
+    "202411": {
+      "TotalArticles": 36,
+      "PartyCounts": {
+        "MDP": 23,
+        "PNC": 16,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 6,
+        "Muizzu": 3,
+        "Solih": 1,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 6,
+        "Muizzu|PNC": 3,
+        "MDP|PNC": 4,
+        "MDP|Solih": 1,
+        "PNC|PPM": 1,
+        "MDP|PPM": 1,
+        "PPM|Yameen": 1,
+        "Muizzu|PPM": 1,
+        "PNC|Yameen": 1,
+        "MDP|Yameen": 1,
+        "MDP|Muizzu": 1,
+        "Muizzu|Yameen": 1
+      }
+    },
+    "202410": {
+      "TotalArticles": 25,
+      "PartyCounts": {
+        "MDP": 15,
+        "PNC": 9,
+        "PPM": 2
+      },
+      "PoliticianCounts": {
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 2,
+        "MDP|Solih": 1
+      }
+    },
+    "202409": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 5,
+        "PNC": 11
+      },
+      "PoliticianCounts": {
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "Muizzu|PNC": 1
+      }
+    },
+    "202408": {
+      "TotalArticles": 31,
+      "PartyCounts": {
+        "MDP": 22,
+        "PNC": 6,
+        "PPM": 2
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "202407": {
+      "TotalArticles": 32,
+      "PartyCounts": {
+        "MDP": 23,
+        "PNC": 7
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1,
+        "MDP|PNC": 1
+      }
+    },
+    "202406": {
+      "TotalArticles": 25,
+      "PartyCounts": {
+        "MDP": 21,
+        "PPM": 1,
+        "PNC": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Solih": 2,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2,
+        "MDP|Solih": 2,
+        "Nasheed|Solih": 1,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1,
+        "MDP|PNC": 3
+      }
+    },
+    "202405": {
+      "TotalArticles": 22,
+      "PartyCounts": {
+        "MDP": 10,
+        "PNC": 10,
+        "PNF": 1,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "PNF|PPM": 1,
+        "PNF|Yameen": 1,
+        "PPM|Yameen": 1,
+        "MDP|Solih": 1
+      }
+    },
+    "202404": {
+      "TotalArticles": 71,
+      "PartyCounts": {
+        "PNC": 35,
+        "PPM": 15,
+        "PNF": 11,
+        "MDP": 28
+      },
+      "PoliticianCounts": {
+        "Yameen": 12,
+        "Nasheed": 1,
+        "Solih": 5
+      },
+      "PairCounts": {
+        "PPM|Yameen": 12,
+        "PNF|PPM": 3,
+        "PNF|Yameen": 3,
+        "MDP|PNC": 5,
+        "MDP|Nasheed": 1,
+        "Nasheed|PNC": 1,
+        "MDP|PPM": 5,
+        "MDP|Yameen": 5,
+        "PNC|PPM": 6,
+        "MDP|Solih": 5,
+        "MDP|PNF": 1,
+        "PPM|Solih": 1,
+        "PNF|Solih": 1,
+        "Solih|Yameen": 1,
+        "PNC|Yameen": 4
+      }
+    },
+    "202403": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "PPM": 2,
+        "PNC": 7,
+        "MDP": 20
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Solih": 2,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "PNC|PPM": 1,
+        "MDP|Solih": 2,
+        "MDP|PNC": 1,
+        "PNC|Solih": 1,
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202402": {
+      "TotalArticles": 62,
+      "PartyCounts": {
+        "MDP": 51,
+        "PNC": 4
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202401": {
+      "TotalArticles": 88,
+      "PartyCounts": {
+        "MDP": 40,
+        "PPM": 10,
+        "PNC": 30,
+        "PNF": 1
+      },
+      "PoliticianCounts": {
+        "Muizzu": 4,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 5,
+        "MDP|Muizzu": 2,
+        "Muizzu|PNC": 4,
+        "PNC|PPM": 8,
+        "Muizzu|PPM": 2,
+        "MDP|Solih": 1
+      }
+    },
+    "202312": {
+      "TotalArticles": 61,
+      "PartyCounts": {
+        "MDP": 35,
+        "PNC": 24,
+        "PNF": 1,
+        "PPM": 9
+      },
+      "PoliticianCounts": {
+        "Muizzu": 6,
+        "Yameen": 5,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|PNC": 5,
+        "Muizzu|PNC": 6,
+        "MDP|Muizzu": 1,
+        "PNF|PPM": 1,
+        "PNF|Yameen": 1,
+        "PPM|Yameen": 5,
+        "PNC|PPM": 8,
+        "PNC|Yameen": 4,
+        "Muizzu|PPM": 4,
+        "Muizzu|Yameen": 2,
+        "MDP|Solih": 1
+      }
+    },
+    "202311": {
+      "TotalArticles": 82,
+      "PartyCounts": {
+        "PNC": 10,
+        "MDP": 41,
+        "PNF": 10,
+        "PPM": 21
+      },
+      "PoliticianCounts": {
+        "Yameen": 11,
+        "Muizzu": 4,
+        "Solih": 2,
+        "Nasheed": 10
+      },
+      "PairCounts": {
+        "PNF|PPM": 7,
+        "PPM|Yameen": 11,
+        "PNF|Yameen": 7,
+        "Muizzu|PNC": 4,
+        "PNC|PPM": 3,
+        "Muizzu|PPM": 2,
+        "MDP|Solih": 2,
+        "MDP|Nasheed": 10
+      }
+    },
+    "202310": {
+      "TotalArticles": 86,
+      "PartyCounts": {
+        "PPM": 13,
+        "MDP": 64,
+        "PNC": 19
+      },
+      "PoliticianCounts": {
+        "Yameen": 6,
+        "Nasheed": 27,
+        "Muizzu": 6,
+        "Solih": 2,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 6,
+        "MDP|Nasheed": 27,
+        "PNC|PPM": 8,
+        "PNC|Yameen": 2,
+        "MDP|PNC": 5,
+        "MDP|Muizzu": 4,
+        "Muizzu|PNC": 6,
+        "Nasheed|PNC": 1,
+        "Muizzu|Nasheed": 1,
+        "MDP|Solih": 2,
+        "Nasheed|Solih": 1,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202309": {
+      "TotalArticles": 54,
+      "PartyCounts": {
+        "PPM": 16,
+        "PNC": 11,
+        "MDP": 34
+      },
+      "PoliticianCounts": {
+        "Solih": 5,
+        "Muizzu": 3,
+        "Nasheed": 5,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PNC|PPM": 6,
+        "MDP|Solih": 5,
+        "MDP|PNC": 3,
+        "MDP|Muizzu": 1,
+        "Muizzu|PNC": 3,
+        "MDP|Nasheed": 5,
+        "MDP|PPM": 2,
+        "Nasheed|PPM": 2,
+        "Nasheed|PNC": 1,
+        "Muizzu|PPM": 1,
+        "PPM|Yameen": 1,
+        "PNC|Yameen": 1
+      }
+    },
+    "202308": {
+      "TotalArticles": 77,
+      "PartyCounts": {
+        "MDP": 45,
+        "PPM": 27,
+        "PNC": 23
+      },
+      "PoliticianCounts": {
+        "Solih": 6,
+        "Nasheed": 5,
+        "Muizzu": 13,
+        "Yameen": 5
+      },
+      "PairCounts": {
+        "MDP|PPM": 6,
+        "MDP|Solih": 6,
+        "PPM|Solih": 4,
+        "MDP|Nasheed": 5,
+        "PNC|PPM": 13,
+        "Muizzu|PPM": 6,
+        "Muizzu|PNC": 13,
+        "MDP|PNC": 2,
+        "MDP|Muizzu": 2,
+        "Nasheed|PPM": 2,
+        "Nasheed|PNC": 1,
+        "Muizzu|Nasheed": 1,
+        "PPM|Yameen": 5,
+        "PNC|Yameen": 3,
+        "Muizzu|Yameen": 1
+      }
+    },
+    "202307": {
+      "TotalArticles": 31,
+      "PartyCounts": {
+        "PPM": 15,
+        "MDP": 17,
+        "PNC": 5
+      },
+      "PoliticianCounts": {
+        "Yameen": 6,
+        "Nasheed": 4,
+        "Fayyaz": 2
+      },
+      "PairCounts": {
+        "PPM|Yameen": 6,
+        "MDP|PPM": 2,
+        "PNC|PPM": 5,
+        "PNC|Yameen": 3,
+        "MDP|Nasheed": 4,
+        "Nasheed|PPM": 1,
+        "Fayyaz|MDP": 2,
+        "Fayyaz|Nasheed": 2
+      }
+    },
+    "202306": {
+      "TotalArticles": 46,
+      "PartyCounts": {
+        "PPM": 13,
+        "PNC": 4,
+        "MDP": 32
+      },
+      "PoliticianCounts": {
+        "Solih": 2,
+        "Nasheed": 10
+      },
+      "PairCounts": {
+        "PNC|PPM": 3,
+        "MDP|Solih": 2,
+        "MDP|Nasheed": 10,
+        "MDP|PPM": 1,
+        "MDP|PNC": 1,
+        "PPM|Solih": 1,
+        "PNC|Solih": 1
+      }
+    },
+    "202305": {
+      "TotalArticles": 52,
+      "PartyCounts": {
+        "MDP": 47,
+        "PPM": 5,
+        "PNC": 2
+      },
+      "PoliticianCounts": {
+        "Nasheed": 9,
+        "Solih": 3,
+        "Muizzu": 1,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 9,
+        "MDP|PPM": 2,
+        "Nasheed|PPM": 2,
+        "PNC|PPM": 2,
+        "MDP|Solih": 3,
+        "Nasheed|Solih": 1,
+        "Muizzu|PNC": 1,
+        "Muizzu|PPM": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "202304": {
+      "TotalArticles": 31,
+      "PartyCounts": {
+        "MDP": 23,
+        "PPM": 8,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "PNC|PPM": 1,
+        "MDP|PPM": 2
+      }
+    },
+    "202303": {
+      "TotalArticles": 34,
+      "PartyCounts": {
+        "MDP": 22,
+        "PPM": 12,
+        "PNC": 5
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "PNC|PPM": 5,
+        "PPM|Yameen": 3,
+        "PNC|Yameen": 2
+      }
+    },
+    "202302": {
+      "TotalArticles": 61,
+      "PartyCounts": {
+        "MDP": 46,
+        "PPM": 14,
+        "PNC": 4
+      },
+      "PoliticianCounts": {
+        "Nasheed": 7,
+        "Solih": 12,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 7,
+        "MDP|Solih": 12,
+        "MDP|PPM": 4,
+        "PNC|PPM": 4,
+        "PPM|Yameen": 3,
+        "PNC|Yameen": 2,
+        "Nasheed|Solih": 1
+      }
+    },
+    "202301": {
+      "TotalArticles": 59,
+      "PartyCounts": {
+        "MDP": 51,
+        "PPM": 5,
+        "PNC": 2
+      },
+      "PoliticianCounts": {
+        "Nasheed": 17,
+        "Fayyaz": 3,
+        "Solih": 11,
+        "Yameen": 1,
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 17,
+        "Fayyaz|MDP": 3,
+        "Fayyaz|Nasheed": 3,
+        "MDP|Solih": 11,
+        "MDP|PPM": 1,
+        "MDP|PNC": 1,
+        "PNC|PPM": 1,
+        "PPM|Yameen": 1,
+        "Nasheed|Solih": 1,
+        "Muizzu|PNC": 1
+      }
+    },
+    "202212": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "PPM": 1,
+        "MDP": 2
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 1,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 1,
+        "MDP|Solih": 1,
+        "Nasheed|Solih": 1
+      }
+    },
+    "202211": {
+      "TotalArticles": 27,
+      "PartyCounts": {
+        "PNC": 2,
+        "PPM": 10,
+        "MDP": 18
+      },
+      "PoliticianCounts": {
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "MDP|PPM": 3,
+        "PPM|Yameen": 2,
+        "MDP|Yameen": 2
+      }
+    },
+    "202210": {
+      "TotalArticles": 18,
+      "PartyCounts": {
+        "MDP": 8,
+        "PPM": 10,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 3,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 3,
+        "MDP|Nasheed": 1,
+        "PNC|PPM": 1,
+        "MDP|PPM": 1
+      }
+    },
+    "202209": {
+      "TotalArticles": 6,
+      "PartyCounts": {
+        "PPM": 5,
+        "PNC": 1,
+        "MDP": 1
+      },
+      "PoliticianCounts": {
+        "Muizzu": 1
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "Muizzu|PNC": 1,
+        "Muizzu|PPM": 1
+      }
+    },
+    "202208": {
+      "TotalArticles": 39,
+      "PartyCounts": {
+        "MDP": 29,
+        "PPM": 8
+      },
+      "PoliticianCounts": {
+        "Solih": 1,
+        "Nasheed": 7,
+        "Yameen": 7
+      },
+      "PairCounts": {
+        "MDP|Solih": 1,
+        "MDP|Nasheed": 7,
+        "PPM|Yameen": 7
+      }
+    },
+    "202207": {
+      "TotalArticles": 22,
+      "PartyCounts": {
+        "PPM": 5,
+        "MDP": 16
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 5,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 5,
+        "MDP|Solih": 1
+      }
+    },
+    "202206": {
+      "TotalArticles": 38,
+      "PartyCounts": {
+        "MDP": 22,
+        "PPM": 13
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4
+      }
+    },
+    "202205": {
+      "TotalArticles": 32,
+      "PartyCounts": {
+        "MDP": 21,
+        "PPM": 9,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 11,
+        "Solih": 1,
+        "Nasheed": 2,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 11,
+        "MDP|Solih": 1,
+        "Fayyaz|Solih": 1,
+        "PNC|PPM": 1,
+        "MDP|Nasheed": 2,
+        "Fayyaz|Nasheed": 2,
+        "PPM|Yameen": 1
+      }
+    },
+    "202204": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "MDP": 7,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2,
+        "MDP|PPM": 1,
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202203": {
+      "TotalArticles": 25,
+      "PartyCounts": {
+        "PPM": 9,
+        "PNC": 4,
+        "MDP": 14
+      },
+      "PoliticianCounts": {
+        "Yameen": 2,
+        "Nasheed": 2,
+        "Fayyaz": 3
+      },
+      "PairCounts": {
+        "PPM|Yameen": 2,
+        "MDP|PPM": 2,
+        "Nasheed|PPM": 2,
+        "MDP|Nasheed": 2,
+        "PNC|PPM": 1,
+        "Fayyaz|MDP": 3
+      }
+    },
+    "202202": {
+      "TotalArticles": 46,
+      "PartyCounts": {
+        "MDP": 33,
+        "PPM": 9,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 2,
+        "Fayyaz": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "PPM|Yameen": 2,
+        "Fayyaz|MDP": 2,
+        "PNC|PPM": 1
+      }
+    },
+    "202201": {
+      "TotalArticles": 29,
+      "PartyCounts": {
+        "PPM": 7,
+        "PNC": 1,
+        "MDP": 21
+      },
+      "PoliticianCounts": {
+        "Yameen": 6,
+        "Nasheed": 5,
+        "Solih": 2
+      },
+      "PairCounts": {
+        "PPM|Yameen": 6,
+        "PNC|PPM": 1,
+        "PNC|Yameen": 1,
+        "MDP|Nasheed": 5,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "MDP|Solih": 2
+      }
+    },
+    "202112": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "MDP": 12,
+        "PPM": 9,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "PPM|Yameen": 3,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1
+      }
+    },
+    "202111": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 6,
+        "PPM": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202110": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "PPM": 1,
+        "MDP": 3
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "202109": {
+      "TotalArticles": 34,
+      "PartyCounts": {
+        "PPM": 4,
+        "MDP": 27
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "202108": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "MDP": 23,
+        "PPM": 4,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Solih": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "PNC|PPM": 1,
+        "MDP|PPM": 2,
+        "MDP|Solih": 3,
+        "PPM|Solih": 1
+      }
+    },
+    "202107": {
+      "TotalArticles": 44,
+      "PartyCounts": {
+        "PPM": 15,
+        "MDP": 36
+      },
+      "PoliticianCounts": {
+        "Nasheed": 15,
+        "Solih": 2,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 15,
+        "MDP|Solih": 2,
+        "MDP|PPM": 7,
+        "PPM|Yameen": 1,
+        "Nasheed|PPM": 4,
+        "MDP|Yameen": 1,
+        "Nasheed|Yameen": 1
+      }
+    },
+    "202106": {
+      "TotalArticles": 7,
+      "PartyCounts": {
+        "MDP": 5,
+        "PPM": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202105": {
+      "TotalArticles": 5,
+      "PartyCounts": {
+        "PPM": 2,
+        "MDP": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202104": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 16
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202103": {
+      "TotalArticles": 14,
+      "PartyCounts": {
+        "MDP": 8,
+        "PPM": 5,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 2
+      }
+    },
+    "202102": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "MDP": 6,
+        "PNC": 2,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Solih": 1
+      }
+    },
+    "202101": {
+      "TotalArticles": 10,
+      "PartyCounts": {
+        "MDP": 5,
+        "PNC": 3,
+        "PPM": 3
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "MDP|PPM": 1,
+        "PNC|PPM": 1,
+        "PPM|Yameen": 1,
+        "PNC|Yameen": 1
+      }
+    },
+    "202012": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "PPM": 1,
+        "MDP": 1,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "202011": {
+      "TotalArticles": 12,
+      "PartyCounts": {
+        "PPM": 1,
+        "MDP": 7,
+        "PNC": 3
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "202010": {
+      "TotalArticles": 11,
+      "PartyCounts": {
+        "PPM": 2,
+        "MDP": 7,
+        "PNC": 2
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202009": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 7
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4,
+        "Fayyaz": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4,
+        "Fayyaz|MDP": 3,
+        "Fayyaz|Nasheed": 3
+      }
+    },
+    "202008": {
+      "TotalArticles": 14,
+      "PartyCounts": {
+        "PPM": 1,
+        "MDP": 9,
+        "PNC": 4
+      },
+      "PoliticianCounts": {
+        "Fayyaz": 1
+      },
+      "PairCounts": {
+        "Fayyaz|MDP": 1
+      }
+    },
+    "202007": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 2,
+        "PNC": 1,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "202006": {
+      "TotalArticles": 11,
+      "PartyCounts": {
+        "PPM": 5,
+        "MDP": 4
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "202005": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "202003": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 14,
+        "PPM": 3,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 2
+      }
+    },
+    "202002": {
+      "TotalArticles": 45,
+      "PartyCounts": {
+        "PPM": 12,
+        "MDP": 34,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Muizzu": 1,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "MDP|PNC": 1,
+        "Muizzu|PNC": 1,
+        "MDP|Muizzu": 1,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Solih": 1
+      }
+    },
+    "202001": {
+      "TotalArticles": 38,
+      "PartyCounts": {
+        "MDP": 32,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 7
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 7
+      }
+    },
+    "201912": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "MDP": 8,
+        "PPM": 5
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201911": {
+      "TotalArticles": 14,
+      "PartyCounts": {
+        "PNC": 1,
+        "MDP": 13
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4
+      }
+    },
+    "201910": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "MDP": 13
+      },
+      "PoliticianCounts": {
+        "Nasheed": 6
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 6
+      }
+    },
+    "201909": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "MDP": 9,
+        "PNC": 2,
+        "PPM": 2
+      },
+      "PoliticianCounts": {
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "PPM|Yameen": 2
+      }
+    },
+    "201908": {
+      "TotalArticles": 6,
+      "PartyCounts": {
+        "MDP": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201907": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201906": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "MDP": 3,
+        "PNC": 1,
+        "PPM": 5
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201905": {
+      "TotalArticles": 15,
+      "PartyCounts": {
+        "PPM": 7,
+        "MDP": 7,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201904": {
+      "TotalArticles": 59,
+      "PartyCounts": {
+        "PNC": 14,
+        "PPM": 12,
+        "MDP": 34
+      },
+      "PoliticianCounts": {
+        "Yameen": 2,
+        "Solih": 2,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PNC|PPM": 1,
+        "PPM|Yameen": 2,
+        "PNC|Yameen": 1,
+        "MDP|Solih": 2,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201903": {
+      "TotalArticles": 50,
+      "PartyCounts": {
+        "MDP": 42,
+        "PPM": 5,
+        "PNC": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4,
+        "MDP|Solih": 1
+      }
+    },
+    "201902": {
+      "TotalArticles": 64,
+      "PartyCounts": {
+        "PPM": 18,
+        "MDP": 42,
+        "PNC": 6
+      },
+      "PoliticianCounts": {
+        "Yameen": 3,
+        "Nasheed": 5,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 3,
+        "MDP|PPM": 3,
+        "MDP|Yameen": 2,
+        "PNC|PPM": 3,
+        "MDP|Nasheed": 5,
+        "MDP|Solih": 1
+      }
+    },
+    "201901": {
+      "TotalArticles": 72,
+      "PartyCounts": {
+        "PPM": 17,
+        "PNC": 22,
+        "MDP": 32
+      },
+      "PoliticianCounts": {
+        "Yameen": 3,
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "PPM|Yameen": 3,
+        "PNC|PPM": 3,
+        "MDP|Nasheed": 4,
+        "PNC|Yameen": 2
+      }
+    },
+    "201812": {
+      "TotalArticles": 50,
+      "PartyCounts": {
+        "MDP": 33,
+        "PPM": 16
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4,
+        "Yameen": 4,
+        "Solih": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4,
+        "PPM|Yameen": 4,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "MDP|Solih": 2
+      }
+    },
+    "201811": {
+      "TotalArticles": 48,
+      "PartyCounts": {
+        "PPM": 26,
+        "MDP": 20
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 2,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "MDP|PPM": 2,
+        "MDP|Yameen": 2,
+        "PPM|Yameen": 2,
+        "MDP|Solih": 1,
+        "PPM|Solih": 1,
+        "Solih|Yameen": 1
+      }
+    },
+    "201810": {
+      "TotalArticles": 60,
+      "PartyCounts": {
+        "PPM": 53,
+        "MDP": 9
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 9,
+        "Solih": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "PPM|Yameen": 9,
+        "MDP|PPM": 4,
+        "MDP|Yameen": 3,
+        "MDP|Solih": 2,
+        "PPM|Solih": 1
+      }
+    },
+    "201809": {
+      "TotalArticles": 62,
+      "PartyCounts": {
+        "PPM": 32,
+        "MDP": 33
+      },
+      "PoliticianCounts": {
+        "Yameen": 6,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 6,
+        "MDP|PPM": 4,
+        "MDP|Yameen": 3,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201808": {
+      "TotalArticles": 56,
+      "PartyCounts": {
+        "MDP": 29,
+        "PPM": 29
+      },
+      "PoliticianCounts": {
+        "Yameen": 5,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 2,
+        "MDP|Yameen": 2,
+        "PPM|Yameen": 5,
+        "MDP|Solih": 1
+      }
+    },
+    "201807": {
+      "TotalArticles": 76,
+      "PartyCounts": {
+        "PPM": 29,
+        "MDP": 51
+      },
+      "PoliticianCounts": {
+        "Yameen": 13,
+        "Solih": 2,
+        "Fayyaz": 1,
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 6,
+        "PPM|Yameen": 13,
+        "MDP|Yameen": 6,
+        "MDP|Solih": 2,
+        "Fayyaz|MDP": 1,
+        "MDP|Nasheed": 2
+      }
+    },
+    "201806": {
+      "TotalArticles": 80,
+      "PartyCounts": {
+        "MDP": 77,
+        "PPM": 4
+      },
+      "PoliticianCounts": {
+        "Nasheed": 12,
+        "Solih": 4,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 12,
+        "MDP|Solih": 4,
+        "Nasheed|Solih": 1,
+        "MDP|PPM": 1,
+        "PPM|Yameen": 1,
+        "MDP|Yameen": 1
+      }
+    },
+    "201805": {
+      "TotalArticles": 17,
+      "PartyCounts": {
+        "MDP": 15,
+        "PPM": 2
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 2
+      }
+    },
+    "201804": {
+      "TotalArticles": 6,
+      "PartyCounts": {
+        "MDP": 5,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201803": {
+      "TotalArticles": 12,
+      "PartyCounts": {
+        "MDP": 7,
+        "PPM": 5
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201802": {
+      "TotalArticles": 15,
+      "PartyCounts": {
+        "PPM": 15
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201801": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "PPM": 6,
+        "MDP": 3
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201712": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 6,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|PPM": 4,
+        "MDP|Nasheed": 2,
+        "MDP|Yameen": 3,
+        "Nasheed|PPM": 2,
+        "PPM|Yameen": 3,
+        "Nasheed|Yameen": 1
+      }
+    },
+    "201711": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "PPM": 3,
+        "MDP": 5
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Nasheed": 1,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201710": {
+      "TotalArticles": 11,
+      "PartyCounts": {
+        "PPM": 6,
+        "MDP": 5
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201709": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "PPM": 2,
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201708": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "PPM": 8,
+        "MDP": 5
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201707": {
+      "TotalArticles": 26,
+      "PartyCounts": {
+        "PPM": 26
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1
+      }
+    },
+    "201706": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "MDP": 2,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201705": {
+      "TotalArticles": 17,
+      "PartyCounts": {
+        "MDP": 7,
+        "PPM": 10
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201704": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "PPM": 11,
+        "MDP": 10
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201703": {
+      "TotalArticles": 54,
+      "PartyCounts": {
+        "PPM": 29,
+        "MDP": 25
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "PPM|Yameen": 2,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1
+      }
+    },
+    "201702": {
+      "TotalArticles": 60,
+      "PartyCounts": {
+        "MDP": 40,
+        "PPM": 24
+      },
+      "PoliticianCounts": {
+        "Yameen": 4,
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "PPM|Yameen": 4,
+        "MDP|PPM": 4,
+        "MDP|Yameen": 2,
+        "MDP|Nasheed": 3
+      }
+    },
+    "201701": {
+      "TotalArticles": 41,
+      "PartyCounts": {
+        "PPM": 21,
+        "MDP": 20
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 3
+      }
+    },
+    "201612": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "PPM": 6,
+        "MDP": 15
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201611": {
+      "TotalArticles": 45,
+      "PartyCounts": {
+        "MDP": 15,
+        "PPM": 32
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "MDP|PPM": 2,
+        "PPM|Yameen": 3
+      }
+    },
+    "201610": {
+      "TotalArticles": 107,
+      "PartyCounts": {
+        "PPM": 93,
+        "MDP": 14
+      },
+      "PoliticianCounts": {
+        "Yameen": 24
+      },
+      "PairCounts": {
+        "PPM|Yameen": 24,
+        "MDP|PPM": 3,
+        "MDP|Yameen": 2
+      }
+    },
+    "201609": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "MDP": 24,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "MDP|PPM": 2,
+        "Nasheed|PPM": 2
+      }
+    },
+    "201608": {
+      "TotalArticles": 32,
+      "PartyCounts": {
+        "PPM": 20,
+        "MDP": 12
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Nasheed": 2,
+        "PPM|Yameen": 1
+      }
+    },
+    "201607": {
+      "TotalArticles": 88,
+      "PartyCounts": {
+        "PPM": 64,
+        "MDP": 23
+      },
+      "PoliticianCounts": {
+        "Yameen": 2,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 2,
+        "MDP|PPM": 2,
+        "MDP|Nasheed": 1,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201606": {
+      "TotalArticles": 39,
+      "PartyCounts": {
+        "PPM": 24,
+        "MDP": 14
+      },
+      "PoliticianCounts": {
+        "Yameen": 4
+      },
+      "PairCounts": {
+        "PPM|Yameen": 4
+      }
+    },
+    "201605": {
+      "TotalArticles": 12,
+      "PartyCounts": {
+        "MDP": 9,
+        "PPM": 3
+      },
+      "PoliticianCounts": {
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "PPM|Yameen": 2,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1
+      }
+    },
+    "201604": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 5,
+        "PPM": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201603": {
+      "TotalArticles": 17,
+      "PartyCounts": {
+        "PPM": 3,
+        "MDP": 15
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201602": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 14,
+        "PPM": 3
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201601": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "MDP": 7,
+        "PPM": 3
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 2
+      }
+    },
+    "201512": {
+      "TotalArticles": 10,
+      "PartyCounts": {
+        "MDP": 9,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201511": {
+      "TotalArticles": 33,
+      "PartyCounts": {
+        "MDP": 23,
+        "PPM": 10
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201510": {
+      "TotalArticles": 81,
+      "PartyCounts": {
+        "MDP": 49,
+        "PPM": 27
+      },
+      "PoliticianCounts": {
+        "Yameen": 2,
+        "Nasheed": 6
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 2,
+        "MDP|Nasheed": 6
+      }
+    },
+    "201509": {
+      "TotalArticles": 38,
+      "PartyCounts": {
+        "PPM": 22,
+        "MDP": 14
+      },
+      "PoliticianCounts": {
+        "Yameen": 2,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 2,
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "MDP|Nasheed": 1,
+        "Nasheed|PPM": 1,
+        "Nasheed|Yameen": 1
+      }
+    },
+    "201508": {
+      "TotalArticles": 31,
+      "PartyCounts": {
+        "PPM": 9,
+        "MDP": 24
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 3,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201507": {
+      "TotalArticles": 40,
+      "PartyCounts": {
+        "MDP": 29,
+        "PPM": 11
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {
+        "MDP|PPM": 1
+      }
+    },
+    "201506": {
+      "TotalArticles": 52,
+      "PartyCounts": {
+        "PPM": 13,
+        "MDP": 34
+      },
+      "PoliticianCounts": {
+        "Solih": 2,
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|Solih": 2,
+        "MDP|Nasheed": 3,
+        "MDP|PPM": 1
+      }
+    },
+    "201505": {
+      "TotalArticles": 47,
+      "PartyCounts": {
+        "MDP": 34,
+        "PPM": 14
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 3,
+        "MDP|Nasheed": 4,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201504": {
+      "TotalArticles": 54,
+      "PartyCounts": {
+        "PPM": 24,
+        "MDP": 28
+      },
+      "PoliticianCounts": {
+        "Nasheed": 9
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 9
+      }
+    },
+    "201503": {
+      "TotalArticles": 127,
+      "PartyCounts": {
+        "MDP": 90,
+        "PPM": 31
+      },
+      "PoliticianCounts": {
+        "Nasheed": 15,
+        "Yameen": 3,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 15,
+        "MDP|PPM": 7,
+        "PPM|Yameen": 3,
+        "MDP|Yameen": 3,
+        "MDP|Solih": 1,
+        "Nasheed|PPM": 3
+      }
+    },
+    "201502": {
+      "TotalArticles": 53,
+      "PartyCounts": {
+        "PPM": 22,
+        "MDP": 29
+      },
+      "PoliticianCounts": {
+        "Nasheed": 5,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 4,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 5,
+        "PPM|Yameen": 2,
+        "MDP|Yameen": 1
+      }
+    },
+    "201501": {
+      "TotalArticles": 33,
+      "PartyCounts": {
+        "MDP": 27,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 4
+      }
+    },
+    "201412": {
+      "TotalArticles": 40,
+      "PartyCounts": {
+        "MDP": 33,
+        "PPM": 8
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201411": {
+      "TotalArticles": 43,
+      "PartyCounts": {
+        "MDP": 30,
+        "PPM": 13
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Solih": 1,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "MDP|Solih": 1,
+        "MDP|PPM": 1,
+        "PPM|Yameen": 2
+      }
+    },
+    "201410": {
+      "TotalArticles": 30,
+      "PartyCounts": {
+        "PPM": 12,
+        "MDP": 23
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3,
+        "MDP|PPM": 5,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201409": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 15,
+        "PPM": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201408": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "PPM": 9,
+        "MDP": 19
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4
+      }
+    },
+    "201407": {
+      "TotalArticles": 25,
+      "PartyCounts": {
+        "PPM": 16,
+        "MDP": 10
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2,
+        "MDP|PPM": 1
+      }
+    },
+    "201406": {
+      "TotalArticles": 21,
+      "PartyCounts": {
+        "MDP": 9,
+        "PPM": 13
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Solih": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 3,
+        "MDP|Nasheed": 2,
+        "MDP|Solih": 1
+      }
+    },
+    "201405": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "PPM": 6,
+        "MDP": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201404": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 11,
+        "PPM": 5
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 3
+      }
+    },
+    "201403": {
+      "TotalArticles": 22,
+      "PartyCounts": {
+        "PPM": 8,
+        "MDP": 14
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "201402": {
+      "TotalArticles": 36,
+      "PartyCounts": {
+        "MDP": 17,
+        "PPM": 20
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201401": {
+      "TotalArticles": 40,
+      "PartyCounts": {
+        "PPM": 21,
+        "MDP": 20
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201312": {
+      "TotalArticles": 18,
+      "PartyCounts": {
+        "MDP": 8,
+        "PPM": 10
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "201311": {
+      "TotalArticles": 35,
+      "PartyCounts": {
+        "PPM": 17,
+        "MDP": 25
+      },
+      "PoliticianCounts": {
+        "Nasheed": 6,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 7,
+        "MDP|Nasheed": 6,
+        "Nasheed|PPM": 4,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 2,
+        "Nasheed|Yameen": 1
+      }
+    },
+    "201310": {
+      "TotalArticles": 41,
+      "PartyCounts": {
+        "MDP": 24,
+        "PPM": 19
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 2,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201309": {
+      "TotalArticles": 66,
+      "PartyCounts": {
+        "PPM": 23,
+        "MDP": 46
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 4,
+        "MDP|Nasheed": 3,
+        "PPM|Yameen": 2,
+        "Nasheed|PPM": 1,
+        "MDP|Yameen": 1
+      }
+    },
+    "201308": {
+      "TotalArticles": 32,
+      "PartyCounts": {
+        "MDP": 13,
+        "PPM": 19
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "PPM|Yameen": 2
+      }
+    },
+    "201307": {
+      "TotalArticles": 27,
+      "PartyCounts": {
+        "MDP": 14,
+        "PPM": 15
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 3
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1,
+        "MDP|PPM": 3,
+        "PPM|Yameen": 3,
+        "MDP|Yameen": 1
+      }
+    },
+    "201306": {
+      "TotalArticles": 39,
+      "PartyCounts": {
+        "PPM": 18,
+        "MDP": 20
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "201305": {
+      "TotalArticles": 29,
+      "PartyCounts": {
+        "MDP": 13,
+        "PPM": 17
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Nasheed": 1,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201304": {
+      "TotalArticles": 41,
+      "PartyCounts": {
+        "PPM": 27,
+        "MDP": 15
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201303": {
+      "TotalArticles": 37,
+      "PartyCounts": {
+        "PPM": 21,
+        "MDP": 18
+      },
+      "PoliticianCounts": {
+        "Yameen": 3,
+        "Solih": 1,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 3,
+        "MDP|PPM": 2,
+        "MDP|Solih": 1,
+        "MDP|Nasheed": 1,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201302": {
+      "TotalArticles": 44,
+      "PartyCounts": {
+        "MDP": 25,
+        "PPM": 24
+      },
+      "PoliticianCounts": {
+        "Yameen": 5,
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "PPM|Yameen": 5,
+        "MDP|PPM": 5,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 3,
+        "MDP|Yameen": 1
+      }
+    },
+    "201301": {
+      "TotalArticles": 24,
+      "PartyCounts": {
+        "MDP": 14,
+        "PPM": 11
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201212": {
+      "TotalArticles": 25,
+      "PartyCounts": {
+        "MDP": 15,
+        "PPM": 9
+      },
+      "PoliticianCounts": {
+        "Yameen": 1,
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "PPM|Yameen": 1,
+        "MDP|Nasheed": 1
+      }
+    },
+    "201211": {
+      "TotalArticles": 13,
+      "PartyCounts": {
+        "PPM": 4,
+        "MDP": 9
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201210": {
+      "TotalArticles": 27,
+      "PartyCounts": {
+        "PPM": 7,
+        "MDP": 18
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 2
+      }
+    },
+    "201209": {
+      "TotalArticles": 33,
+      "PartyCounts": {
+        "MDP": 26,
+        "PPM": 11
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 4,
+        "MDP|Nasheed": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201208": {
+      "TotalArticles": 33,
+      "PartyCounts": {
+        "MDP": 28,
+        "PPM": 6
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "Nasheed|PPM": 1,
+        "MDP|Nasheed": 3
+      }
+    },
+    "201207": {
+      "TotalArticles": 46,
+      "PartyCounts": {
+        "MDP": 40,
+        "PPM": 8
+      },
+      "PoliticianCounts": {
+        "Nasheed": 7
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 7,
+        "MDP|PPM": 2
+      }
+    },
+    "201206": {
+      "TotalArticles": 43,
+      "PartyCounts": {
+        "MDP": 41,
+        "PPM": 2
+      },
+      "PoliticianCounts": {
+        "Nasheed": 6
+      },
+      "PairCounts": {
+        "MDP|PPM": 2,
+        "MDP|Nasheed": 6
+      }
+    },
+    "201205": {
+      "TotalArticles": 55,
+      "PartyCounts": {
+        "MDP": 46,
+        "PPM": 10
+      },
+      "PoliticianCounts": {
+        "Nasheed": 4
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 4,
+        "MDP|PPM": 3
+      }
+    },
+    "201204": {
+      "TotalArticles": 42,
+      "PartyCounts": {
+        "MDP": 33,
+        "PPM": 11
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2,
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 2,
+        "MDP|Nasheed": 2,
+        "PPM|Yameen": 1
+      }
+    },
+    "201203": {
+      "TotalArticles": 64,
+      "PartyCounts": {
+        "MDP": 54,
+        "PPM": 10
+      },
+      "PoliticianCounts": {
+        "Nasheed": 3
+      },
+      "PairCounts": {
+        "MDP|PPM": 3,
+        "MDP|Nasheed": 3,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201202": {
+      "TotalArticles": 33,
+      "PartyCounts": {
+        "MDP": 32,
+        "PPM": 3
+      },
+      "PoliticianCounts": {
+        "Nasheed": 2
+      },
+      "PairCounts": {
+        "MDP|PPM": 2,
+        "MDP|Nasheed": 2,
+        "Nasheed|PPM": 1
+      }
+    },
+    "201201": {
+      "TotalArticles": 28,
+      "PartyCounts": {
+        "MDP": 18,
+        "PPM": 12
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {
+        "MDP|PPM": 2
+      }
+    },
+    "201112": {
+      "TotalArticles": 17,
+      "PartyCounts": {
+        "PPM": 4,
+        "MDP": 13
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201111": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "PPM": 7,
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201110": {
+      "TotalArticles": 29,
+      "PartyCounts": {
+        "MDP": 20,
+        "PPM": 9
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201109": {
+      "TotalArticles": 15,
+      "PartyCounts": {
+        "MDP": 6,
+        "PPM": 9
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201108": {
+      "TotalArticles": 9,
+      "PartyCounts": {
+        "MDP": 9
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201107": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 8
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201106": {
+      "TotalArticles": 12,
+      "PartyCounts": {
+        "MDP": 11
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201105": {
+      "TotalArticles": 15,
+      "PartyCounts": {
+        "MDP": 15
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201104": {
+      "TotalArticles": 6,
+      "PartyCounts": {
+        "MDP": 5
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201103": {
+      "TotalArticles": 16,
+      "PartyCounts": {
+        "MDP": 15
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201102": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201101": {
+      "TotalArticles": 6,
+      "PartyCounts": {
+        "MDP": 6
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201012": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201011": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "MDP": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201010": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "MDP": 3
+      },
+      "PoliticianCounts": {
+        "Nasheed": 1
+      },
+      "PairCounts": {
+        "MDP|Nasheed": 1
+      }
+    },
+    "201009": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "MDP": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201008": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2,
+        "PPM": 1
+      },
+      "PoliticianCounts": {
+        "Yameen": 1
+      },
+      "PairCounts": {
+        "MDP|PPM": 1,
+        "MDP|Yameen": 1,
+        "PPM|Yameen": 1
+      }
+    },
+    "201007": {
+      "TotalArticles": 5,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201006": {
+      "TotalArticles": 3,
+      "PartyCounts": {
+        "MDP": 3
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201005": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201004": {
+      "TotalArticles": 5,
+      "PartyCounts": {
+        "MDP": 5
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201003": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201002": {
+      "TotalArticles": 8,
+      "PartyCounts": {
+        "MDP": 8
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "201001": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200912": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200911": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200705": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200701": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200612": {
+      "TotalArticles": 1,
+      "PartyCounts": {},
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200604": {
+      "TotalArticles": 1,
+      "PartyCounts": {},
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200511": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200510": {
+      "TotalArticles": 2,
+      "PartyCounts": {
+        "MDP": 2
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200508": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200412": {
+      "TotalArticles": 1,
+      "PartyCounts": {
+        "MDP": 1
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    },
+    "200411": {
+      "TotalArticles": 4,
+      "PartyCounts": {
+        "MDP": 4
+      },
+      "PoliticianCounts": {},
+      "PairCounts": {}
+    }
+  }
+}
